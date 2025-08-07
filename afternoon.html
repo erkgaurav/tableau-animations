@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <style>
     @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
     .icon {
       animation: bounce 1.5s infinite;
@@ -15,12 +13,14 @@
   </style>
 </head>
 <body style="margin:0; background-color:#12122f;">
-  <svg width="60" height="60" viewBox="0 0 100 100">
+  <svg width="60" height="100" viewBox="0 0 100 120">
+    <!-- Animated icon -->
     <g class="icon">
       <circle cx="50" cy="50" r="20" fill="#87CEEB" />
-      <text x="50" y="95" font-size="10" text-anchor="middle" fill="white">Afternoon Shift</text>
     </g>
+
+    <!-- Static text label -->
+    <text x="50" y="110" font-size="10" text-anchor="middle" fill="white">Afternoon Shift</text>
   </svg>
 </body>
 </html>
-    
