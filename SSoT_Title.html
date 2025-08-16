@@ -3,15 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gradient Card Example</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>SLOP SDU Governance</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+    }
+    .banner {
+      background: linear-gradient(90deg, #5b5d7a, #44465f, #3c3f54);
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+      padding: 20px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .banner strong {
+      display: block;
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+  </style>
 </head>
-<body class="bg-[#121212] flex items-center justify-center min-h-screen">
-
-  <div class="bg-gradient-to-br from-[#3b3f5c] to-[#2b2e44] shadow-2xl rounded-2xl p-8 w-[600px] text-center text-white">
-    <h1 class="text-2xl font-semibold">Managed Service Network Single Source of Truth</h1>
-    <h2 class="text-xl font-bold mt-2">SLOP SDU Governance</h2>
+<body>
+  <div class="banner">
+    Managed Service Network Single Source of Truth
+    <strong>SLOP SDU Governance</strong>
   </div>
-
 </body>
 </html>
