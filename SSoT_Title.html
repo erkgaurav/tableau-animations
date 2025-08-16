@@ -3,60 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pop In-Out Animated Card</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #141416; /* Dark background */
-      font-family: Arial, sans-serif;
-    }
-
-    .card {
-      width: 320px;
-      padding: 20px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #004e92, #000428); /* Blue gradient */
-      color: white;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      text-align: left;
-      animation: pop 2s infinite;
-    }
-
-    .icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    h2 {
-      margin: 0 0 10px 0;
-      font-size: 22px;
-    }
-
-    p {
-      margin: 0;
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    @keyframes pop {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.08);
-      }
-    }
-  </style>
+  <title>Gradient Card Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="card">
-    <div class="icon">☰</div>
-    <h2>Single Source of Truth</h2>
-    <p>Enterprise KPI</p>
+<body class="bg-[#121212] flex items-center justify-center min-h-screen">
+
+  <div class="bg-gradient-to-br from-[#3b3f5c] to-[#2b2e44] shadow-2xl rounded-2xl p-8 w-[600px] text-center text-white">
+    <h1 class="text-2xl font-semibold">Managed Service Network Single Source of Truth</h1>
+    <h2 class="text-xl font-bold mt-2">SLOP SDU Governance</h2>
   </div>
+
 </body>
 </html>
