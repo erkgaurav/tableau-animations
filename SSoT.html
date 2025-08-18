@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/><title>sso_style3</title>
+<head>
+<meta charset="utf-8"/>
+<title>sso_style3</title>
 <style>
-html,body{height:100%;margin:0;background:#121217;font-family:'Trebuchet MS',Arial,sans-serif;display:flex;align-items:center;justify-content:center}
-.card{width:320px;padding:26px;border-radius:14px;background:linear-gradient(180deg,#07233b,#003b6b);color:#fff;text-align:left;box-shadow:0 18px 40px rgba(0,0,0,0.6);transition:transform .22s,box-shadow .22s;display:flex;gap:14px;align-items:center}
-.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 28px 60px rgba(0,0,0,0.7)}
-.logo{width:45px;height:25px;flex:0 0 45px;display:block}
-.content{font-weight:700;font-size:18px;line-height:1.18}
-.content small{display:block;font-weight:400;font-size:10px;opacity:0.85;margin-top:5px}
+html,body{
+  height:100%;
+  margin:0;
+  background:#121217;
+  font-family:'Trebuchet MS',Arial,sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card{
+  width:220px;              /* reduced width */
+  padding:16px;             /* reduced padding */
+  border-radius:12px;
+  background:linear-gradient(180deg,#07233b,#003b6b);
+  color:#fff;
+  text-align:left;
+  box-shadow:0 12px 28px rgba(0,0,0,0.55);
+  transition:transform .22s,box-shadow .22s;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.card:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,0.65);
+}
+.logo{
+  width:30px;   /* reduced logo size */
+  height:18px;
+  flex:0 0 30px;
+  display:block;
+}
+.content{
+  font-weight:700;
+  font-size:14px; /* smaller text */
+  line-height:1.2;
+}
+.content small{
+  display:block;
+  font-weight:400;
+  font-size:9px;
+  opacity:0.85;
+  margin-top:3px;
+}
 </style>
-</head><body>
+</head>
+<body>
 <div class="card" role="img" aria-label="Single Source of Truth card badge">
-<svg class="logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <g fill="#fff">
-    <rect x="8" y="6" width="84" height="8" rx="4" transform="skewX(-12)"></rect>
-    <rect x="8" y="24" width="84" height="8" rx="4" transform="skewX(-12)"></rect>
-    <rect x="8" y="42" width="84" height="8" rx="4" transform="skewX(-12)"></rect>
-  </g>
-</svg>
-<div class="content">Single Source<br>of Truth<small>Enterprise KPI</small></div>
+  <svg class="logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g fill="#fff">
+      <rect x="8" y="6" width="84" height="8" rx="4" transform="skewX(-12)"></rect>
+      <rect x="8" y="24" width="84" height="8" rx="4" transform="skewX(-12)"></rect>
+      <rect x="8" y="42" width="84" height="8" rx="4" transform="skewX(-12)"></rect>
+    </g>
+  </svg>
+  <div class="content">
+    Single Source<br>of Truth
+    <small>Enterprise KPI</small>
+  </div>
 </div>
-</body></html>
+</body>
+</html>
