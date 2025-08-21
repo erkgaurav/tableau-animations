@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bubble Animation</title>
+  <title>Bubble Animation with Real Effect</title>
   <style>
     body {
       margin: 0;
       height: 100vh;
-      background: url('background.png') no-repeat center center fixed;
+      background: url('background_clean.png') no-repeat center center fixed;
       background-size: cover;
       overflow: hidden;
     }
+
     .bubble {
       position: absolute;
       border-radius: 50%;
       background: radial-gradient(circle at 30% 30%, #7a4cc7, #2d0d63);
-      opacity: 0.8;
-      animation: pop 3s infinite ease-in-out;
+      opacity: 0.7;
+      animation: floatUp 12s linear infinite, pop 3s ease-in-out infinite;
     }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-120vh) scale(1); }
+    }
+
     @keyframes pop {
       0%, 100% {
         transform: scale(0.8);
@@ -37,15 +44,17 @@
       let bubble = document.createElement("div");
       bubble.classList.add("bubble");
 
-      let size = Math.random() * 50 + 15;
+      let size = Math.random() * 40 + 20;
       bubble.style.width = size + "px";
       bubble.style.height = size + "px";
 
       bubble.style.left = Math.random() * 100 + "vw";
       bubble.style.top = Math.random() * 100 + "vh";
 
-      bubble.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      bubble.style.animationDelay = (Math.random() * 5) + "s";
+      bubble.style.animationDuration = 
+        (Math.random() * 10 + 8) + "s, " + (Math.random() * 3 + 2) + "s";
+      bubble.style.animationDelay = 
+        (Math.random() * 5) + "s, " + (Math.random() * 2) + "s";
 
       document.body.appendChild(bubble);
     }
