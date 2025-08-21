@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Continuous Bubble Animation with Background</title>
+  <title>Dashboard Bubbles (Final)</title>
   <style>
+    html, body { height: 100%; margin: 0; }
     body {
-      margin: 0;
       height: 100vh;
-      background: url('background.png') no-repeat center center fixed; /* 👈 yahan tumhara original background */
+      background: url('data:image/png;base64,PUT_YOUR_BASE64_STRING_HERE') no-repeat center center fixed;
       background-size: cover;
       overflow: hidden;
+      position: relative;
     }
 
     .logo-mask {
@@ -20,7 +21,7 @@
       height: 16vh;
       pointer-events: none;
       background: radial-gradient(80% 80% at 90% 10%,
-                  rgba(10, 2, 34, 0.95) 0%,
+                  rgba(10, 2, 34, 0.96) 0%,
                   rgba(15, 3, 50, 0.88) 40%,
                   rgba(20, 5, 60, 0.65) 70%,
                   rgba(20, 5, 60, 0.0) 100%);
@@ -33,6 +34,7 @@
       background: radial-gradient(circle at 30% 30%, #7a4cc7, #2d0d63);
       opacity: 0.75;
       animation: floatUp var(--floatDur) linear infinite, pop var(--popDur) ease-in-out infinite;
+      will-change: transform, opacity;
     }
 
     @keyframes floatUp {
@@ -50,34 +52,34 @@
   <div class="logo-mask"></div>
 
   <script>
-    const numBubbles = 60;
+    const numBubbles = 65;
 
     for (let i = 0; i < numBubbles; i++) {
-      const bubble = document.createElement("div");
-      bubble.classList.add("bubble");
+      const b = document.createElement('div');
+      b.className = 'bubble';
 
-      const size = Math.random() * 40 + 20;
-      bubble.style.width = size + "px";
-      bubble.style.height = size + "px";
+      const size = Math.random() * 42 + 18;
+      b.style.width  = size + 'px';
+      b.style.height = size + 'px';
 
-      bubble.style.left = Math.random() * 100 + "vw";
-      bubble.style.top = Math.random() * 100 + "vh";
+      b.style.left   = (Math.random() * 100) + 'vw';
+      b.style.top    = (Math.random() * 100) + 'vh';
 
-      const floatDur = (Math.random() * 8 + 8).toFixed(2) + "s";
-      const popDur = (Math.random() * 2 + 2).toFixed(2) + "s";
+      const floatDur = (Math.random() * 8 + 8).toFixed(2) + 's';
+      const popDur   = (Math.random() * 2 + 2).toFixed(2) + 's';
+      b.style.setProperty('--floatDur', floatDur);
+      b.style.setProperty('--popDur',   popDur);
 
-      bubble.style.setProperty("--floatDur", floatDur);
-      bubble.style.setProperty("--popDur", popDur);
+      b.style.animationDelay = (Math.random() * 5).toFixed(2) + 's, ' + (Math.random() * 2).toFixed(2) + 's';
 
-      // Reset bubble when it finishes floating up
-      bubble.addEventListener("animationiteration", (e) => {
-        if (e.animationName === "floatUp") {
-          bubble.style.top = "110vh"; // reset below screen
-          bubble.style.left = Math.random() * 100 + "vw"; // random X pos
+      b.addEventListener('animationiteration', (e) => {
+        if (e.animationName === 'floatUp') {
+          b.style.top = '110vh';
+          b.style.left = (Math.random() * 100) + 'vw';
         }
       });
 
-      document.body.appendChild(bubble);
+      document.body.appendChild(b);
     }
   </script>
 </body>
