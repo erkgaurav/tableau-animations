@@ -2,42 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Single Source of Truth - Style 3 (Animated Pulse)</title>
+  <title>KPI Title Banner</title>
   <style>
-    body { background:#0b0b22; display:flex; height:100vh; align-items:center; justify-content:center; margin:0; font-family:'Trebuchet MS', Arial, sans-serif; }
-    .badge {
-      background:#0866cf;
-      width:220px;
-      padding:26px 16px 38px;
-      color:#fff;
-      text-align:center;
-      border-radius:10px 10px 0 0;
-      position:relative;
-      box-shadow:0 8px 22px rgba(0,0,0,0.4);
-      animation:pulse 2s infinite;
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111; /* preview background */
     }
-    .badge::after {
-      content:"";
-      position:absolute;
-      bottom:-26px; left:0; right:0; margin:auto;
-      width:0; height:0;
-      border-left:110px solid transparent;
-      border-right:110px solid transparent;
-      border-top:26px solid #00173d;
+
+    .banner {
+      background: #0078D7; /* blue background */
+      color: white;
+      font-weight: bold;
+      font-size: 28px;
+      padding: 15px 40px;
+      border-radius: 6px;
+      animation: glow 2s infinite ease-in-out;
+      cursor: pointer;
     }
-    @keyframes pulse {
-      0% { transform:scale(1); }
-      50% { transform:scale(1.05); }
-      100% { transform:scale(1); }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 10px #ffffff80, 0 0 20px #0078D7, 0 0 40px #0078D7;
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 20px #ffffffcc, 0 0 40px #0078D7, 0 0 60px #0078D7;
+        transform: scale(1.05);
+      }
     }
-    .logo { font-size:18px; margin-bottom:8px; font-weight:800; letter-spacing:0.5px; }
-    .text { font-size:18px; line-height:1.3; }
   </style>
 </head>
 <body>
-  <div class="badge">
-    <div class="logo">ERICSSON</div>
-    <div class="text">Single<br>Source of<br>Truth</div>
+  <div class="banner" onclick="window.open('https://www.example.com', '_blank')">
+    KPI Comparison YOY
   </div>
 </body>
 </html>
