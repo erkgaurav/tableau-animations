@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative; /* allow absolute footer */
+      position: relative;
       font-family: Verdana, Geneva, sans-serif;
     }
 
@@ -44,16 +44,17 @@
       }
     }
 
-    .footer-text {
+    .center-text {
       position: absolute;
-      bottom: 20px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 3rem;
       font-weight: bold;
       text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px #0078D7, 0 0 40px #0078D7;
       animation: glow 2s infinite ease-in-out;
+      pointer-events: none; /* let bubbles animate behind */
     }
 
     @keyframes glow {
@@ -68,7 +69,7 @@
 </head>
 <body>
   <div class="container" id="container"></div>
-  <div class="footer-text">Work In Progress</div>
+  <div class="center-text">Work In Progress</div>
 
   <script>
     const container = document.getElementById("container");
