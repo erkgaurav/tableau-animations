@@ -2,55 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>sso_card</title>
+  <title>sso_card_small</title>
   <style>
     html, body {
       height: 100%;
       margin: 0;
-      background: #eef2f4;
       font-family: Verdana, Geneva, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: linear-gradient(135deg, #00a4ff, #0059a8); /* same as card bg */
     }
 
     .card {
-      width: 360px;
-      min-height: 220px;
-      border-radius: 20px;
+      width: 72px;   /* reduced size */
+      min-height: 44px;
+      border-radius: 10px;
       background: linear-gradient(135deg, #00a4ff, #0059a8);
       color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
       text-align: center;
-      padding: 24px;
+      padding: 5px;
     }
 
     .logo {
-      width: 86px;
-      height: 48px;
-      margin-bottom: 14px;
+      width: 17px;   /* scaled down */
+      height: 10px;
+      margin-bottom: 3px;
       display: block;
     }
 
     .text {
-      font-size: 24px;
+      font-size: 5px;   /* reduced font */
       font-weight: 700;
       line-height: 1.2;
     }
 
     .sub {
-      font-size: 14px;
+      font-size: 3px;   /* reduced font */
       opacity: 0.95;
-      margin-top: 6px;
+      margin-top: 2px;
     }
   </style>
 </head>
 <body>
-  <div class="card" role="img" aria-label="Single Source of Truth card badge">
+  <div class="card" role="img" aria-label="Small Single Source of Truth card badge">
     <svg class="logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <g fill="#fff">
         <rect x="12" y="6" width="76" height="8" rx="4" transform="skewX(-12)"></rect>
