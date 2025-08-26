@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Card — Dark BG</title>
+  <style>
+    /* Page background only (taken from snippet-style) */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0f0f12; /* dark, near-black background */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Same animated card from earlier */
+    .card {
+      background: rgba(255,255,255,0.92);
+      color: #1b2a41;
+      border-radius: 20px;
+      padding: 32px 42px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+      animation: popInOut 2.6s ease-in-out infinite;
+      max-width: 880px;
+      line-height: 1.3;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    @keyframes popInOut {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .sub {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #2d3e57;
+      opacity: .9;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    Managed Service Network Single Source of Truth <br />
+    <span class="sub">SLOP SDU Governance</span>
+  </div>
+</body>
+</html>
