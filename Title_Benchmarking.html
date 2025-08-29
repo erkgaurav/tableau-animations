@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animated Card — Dark BG</title>
   <style>
-    body {
+    html {
       margin: 0;
       height: 70vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: transparent /* match card background */
+      background: transparent; /* match card background */
       font-family: Arial, sans-serif;
     }
 
     .card {
-      background: linear-gradient(180deg,#07233b,#1f1f1f);   /* same as body */
+      background: linear-gradient(180deg,#07233b,#1f1f1f);   /* same as html */
       color: #FFFFFF;
       border-radius: 20px;
       padding: 32px 42px;
@@ -44,10 +44,8 @@
     }
   </style>
 </head>
-<body>
-  <div class="card">
-    Ericsson Managed Services <br />
-    <span class="sub">Standard Benchmarking Templates</span>
-  </div>
-</body>
+<div class="card">
+  Ericsson Managed Services <br />
+  <span class="sub">Standard Benchmarking Templates</span>
+</div>
 </html>
